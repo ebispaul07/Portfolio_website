@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-e"></i>
+                    <div class="logo-text">EBI S PAUL</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="portfimg.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>EBI S PAUL</h1>
+                    <p> "Hello! I’m a passionate frontend developer with a strong focus on creating visually appealing and user-friendly websites. 
+                        Skilled in HTML, CSS, JavaScript, and react js, I’m driven to deliver engaging digital experiences that stand out."
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="my Resume.pdf" download="my Resume.pdf" class="btn active">Download CV</a>
+                       <a href="tel:+917598998831" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://github.com/ebispaul07"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ebi-s-paul-220b1b2b8/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/real_photographyz?igsh=MTl3b2VxMXFhazVrZg=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://ebispaul07.github.io/Gemini-clone/"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            
+            const a = document.createElement('a');
+            a.href = 'my Resume.pdf';
+            a.download = 'my Resume.pdf';
+            document.body.appendChild(a);
+            a.click(); });
+
+
+
+
+
+
+
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","UX Designer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
